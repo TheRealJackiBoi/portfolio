@@ -20,7 +20,7 @@ const getRepos = async () => {
 };
 
 const Projects = async () => {
-  const repos: repo[] | undefined = await getRepos();
+  const repos: any[] | undefined = await getRepos();
 
   if (!repos) {
     return <div>Error</div>;
