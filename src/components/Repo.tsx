@@ -18,7 +18,7 @@ const Repo = ({ repo }: { repo: repo }) => {
       <CardHeader>
         <CardTitle className="text-xl font-bold mb-2">{repo.name}</CardTitle>
       </CardHeader>
-      <CardContent className="flex-col h-full mb-2 justify-between">
+      <CardContent className="flex-col h-full mb-2 justify-between text-wrap">
         <CardDescription className="text-gray-700 mb-2 h-full">
           {repo.description || "No description"}
         </CardDescription>
