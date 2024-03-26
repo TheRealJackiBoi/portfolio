@@ -18,8 +18,8 @@ const Repo = ({ repo }: { repo: repo }) => {
       <CardHeader>
         <CardTitle className="text-xl font-bold mb-2">{repo.name}</CardTitle>
       </CardHeader>
-      <CardContent className="flex-col h-full mb-2 justify-between text-wrap">
-        <CardDescription className="text-gray-700 mb-2 h-full">
+      <CardContent className="flex-col w-full h-full mb-2 justify-between text-balance">
+        <CardDescription className="text-gray-700 mb-2 w-full h-full text-pretty break-words">
           {repo.description || "No description"}
         </CardDescription>
         {repo.homepage && (
