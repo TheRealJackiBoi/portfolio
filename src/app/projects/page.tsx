@@ -1,4 +1,5 @@
 import Repo from "@/components/Repo";
+import { H1, P } from "@/components/Typography";
 import { repo } from "@/index";
 import { getRepos as getReposFromGithub } from "@/utilities/githubfacade";
 
@@ -8,6 +9,7 @@ const getRepos = async () => {
   return await getReposFromGithub([
     "BlogExamProject",
     "FullStackExam-Frontend",
+    "FullStackExam-Backend",
     "NotesRestApi",
     "java-deepdive-final",
     "dat2-fog-carport",
@@ -28,8 +30,11 @@ const Projects = async () => {
 
   return (
     <div>
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Projects</h1>
-      <p className="leading-7 [&:not(:first-child)]:mt-6">This is some of my projects that I&apos;ve highlited</p>
+      <H1 text="Projects" />
+      <P
+        className="leading-7 [&:not(:first-child)]:mt-6"
+        text="This is some of my projects that I've highlited"
+      />
       <div className="my-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {repos.map((repo) => (
           <Repo repo={repo} key={repo.id} />
