@@ -28,8 +28,9 @@ const Projects = async () => {
 
   return (
     <div>
-      <h1>Projects</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">Projects</h1>
+      <p className="leading-7 [&:not(:first-child)]:mt-6">This is some of my projects that I've highlited</p>
+      <div className="my-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {repos.map((repo) => (
           <Repo repo={repo} key={repo.id} />
         ))}

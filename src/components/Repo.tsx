@@ -14,14 +14,19 @@ import {
 
 const Repo = ({ repo }: { repo: repo }) => {
   return (
-    <Card>
+    <Card className="flex flex-1 flex-col justify-between isolate bg-white/50 shadow-lg ring-1 ring-black/5">
       <CardHeader>
         <CardTitle className="text-xl font-bold mb-2">{repo.name}</CardTitle>
       </CardHeader>
-      <CardContent className="flex justify-between">
-        <CardDescription className="text-gray-700 mb-2">
+      <CardContent className="flex-col h-full mb-2 justify-between">
+        <CardDescription className="text-gray-700 mb-2 h-full">
           {repo.description || "No description"}
         </CardDescription>
+        {repo.homepage && (
+          <a className="font-light text-primary" href={repo.homepage} target="_blank">
+            Website
+          </a>
+        )}
       </CardContent>
       <CardFooter className="flex justify-between">
         <a
