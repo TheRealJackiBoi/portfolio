@@ -182,4 +182,5 @@ export interface repo {
   mirror_url: string;
   hooks_url: string;
   svn_url: string;
+  homepage: string;
 }
