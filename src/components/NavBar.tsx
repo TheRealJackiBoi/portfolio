@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaHouseChimney } from "react-icons/fa6";
 import { FaBook } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa6";
 
 const NavBar = () => {
   return (
@@ -10,6 +11,9 @@ const NavBar = () => {
       </Link>
       <Link href={"/projects"}>
         <FaBook className="text-2xl text-slate-500" />
+      </Link>
+      <Link href={"/contact"}>
+        <FaPhone className="text-2xl text-slate-500" />
       </Link>
     </nav>
   );
